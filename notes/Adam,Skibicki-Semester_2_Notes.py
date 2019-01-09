@@ -16,10 +16,14 @@ print("Wwwwwwwwwwwwwaaaooooooowwww your " + age + " years old wwwwwwwwwwwwoooooo
 
 list1 = ["blue, yellow, orange, green, red"]
 
-list1.append("brown")
+# list1.append("brown")
 
 print(list1)
 
-list1.pop(0)
+# list1.pop(0)
 
-print(list1)
+# print(list1)
+
+print(len(list1))
+
+print(list1[1])
