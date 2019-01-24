@@ -4,9 +4,12 @@ import random
 # variables
 tries = 8
 guesses = []
+asterisk = []
+
+# Win Condition
 Win = False
 
-# word bank
+# Word bank
 word = ("Hello", "Goodbye", "Hollow Knight", "Flex Tape", "Thatsa lotta damage", "Lilo and stich",
 "Megalovania", "Undertale's Fanbase", "million", "Lion King")
 
@@ -15,15 +18,24 @@ Word = random.choice(word)
 
 # Make word list
 Word = list(Word)
-print(Word)
+
+# for loop / make the word asterisks
+for letters_in_word in range(len(Word)):
+    asterisk.append("*")
+
+# print the thing
+print(asterisk)
 
 # loop
 while tries > 0:
-    guesses = input("choose a letter")
+    guesses.append(input("choose a letter"))
+    if guesses in word
+    gprint(asterisk)
 
     tries -= 1
-    if tries == 0:
-        Win = False
+
+print(guesses)
+print(Word)
 
 '''
 # win/lose
@@ -33,5 +45,4 @@ if Win = True:
 if Win = False:
     print("You lose")
 
-# For i in range(len(Word))
 '''
