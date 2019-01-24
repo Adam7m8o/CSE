@@ -29,13 +29,15 @@ print(asterisk)
 # loop
 while tries > 0:
     guesses.append(input("choose a letter"))
-    if guesses in word
-    gprint(asterisk)
+    if guesses in Word:
+        asterisk.append[guesses]
+    print(asterisk)
 
     tries -= 1
 
 print(guesses)
 print(Word)
+print(asterisk)
 
 '''
 # win/lose
