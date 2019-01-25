@@ -36,8 +36,7 @@ while tries > 0:
     tries -= 1
 
 print(guesses)
-print(Word)
-print(asterisk)
+print(Word) 
 
 '''
 # win/lose
