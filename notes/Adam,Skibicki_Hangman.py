@@ -30,20 +30,21 @@ print(asterisk)
 while tries > 0:
     guesses.append(input("choose a letter"))
     if guesses in Word:
-        asterisk.append[guesses]
+        asterisk.[guesses]
     print(asterisk)
 
     tries -= 1
 
-print(guesses)
-print(Word) 
+if tries == 0
+    Win = False
 
-'''
+print(guesses)
+print(Word)
+
+
 # win/lose
-if Win = True:
+if Win == True:
     print("You win")
 
-if Win = False:
+if Win == False:
     print("You lose")
-
-'''
