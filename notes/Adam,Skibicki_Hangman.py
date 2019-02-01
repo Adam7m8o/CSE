@@ -35,7 +35,7 @@ while tries > 0:
 
     tries -= 1
 
-if tries == 0
+if tries == 0:
     Win = False
 
 print(guesses)
