@@ -75,6 +75,7 @@ for state, facts in nested_dictionary.items():
         print(value)
         print("-" * 20)
     print("<>" * 20)
+
 worldmap = {
     "R19A":{
         'NAME': "Weibe's room",
@@ -92,7 +93,7 @@ worldmap = {
 }:
 
 # other variables
-current_node = worldmap["Q19A"]
+current_node = worldmap["R19A"]:
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 playing = True
 
