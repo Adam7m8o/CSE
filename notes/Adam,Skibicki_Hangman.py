@@ -3,7 +3,7 @@ import random
 
 # variables
 tries = 8
-guesses = []
+guess = []
 asterisk = []
 
 # Win Condition
@@ -28,9 +28,9 @@ print(asterisk)
 
 # loop
 while tries > 0:
-    guesses.append(input("choose a letter"))
-    if guesses in Word:
-        asterisk.[guesses]
+    guess.append(input("choose a letter"))
+    if guess in Word:
+        asterisk.[guess]
     print(asterisk)
 
     tries -= 1
