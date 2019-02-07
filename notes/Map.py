@@ -85,7 +85,7 @@ worldmap = {
     },
     "MW2":{
         "NAME": "mossy wall",
-        "DESCRIPTION": "It is a mossy wall,"
+        "DESCRIPTION": "It is a mossy wall"
     },
 },
 

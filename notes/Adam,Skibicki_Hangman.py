@@ -5,6 +5,7 @@ import random
 tries = 8
 guess = []
 asterisk = []
+please = []
 
 # Win Condition
 Win = False
@@ -17,7 +18,7 @@ word = ("Hello", "Goodbye", "Hollow Knight", "Flex Tape", "Thatsa lotta damage",
 Word = random.choice(word)
 
 # Make word list
-Word = list(Word)
+Word = (list(Word))
 
 # for loop / make the word asterisks
 for letters_in_word in range(len(Word)):
@@ -30,21 +31,20 @@ print(asterisk)
 while tries > 0:
     guess.append(input("choose a letter"))
     if guess in Word:
-        asterisk.[guess]
+        asterisk = asterisk(Word, asterisk, guess)
     print(asterisk)
-
+else:
     tries -= 1
 
 if tries == 0:
     Win = False
 
-print(guesses)
-print(Word)
+print(guess)
+print(str(Word))
 
 
 # win/lose
 if Win == True:
     print("You win")
-
-if Win == False:
+else:
     print("You lose")
