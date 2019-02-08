@@ -1,4 +1,7 @@
-worldmap = {
+current_node = World["OMD"]
+directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
+playing = True
+World = {
     "OMD":{
         'NAME': "Forest",
         'DESCRIPTION': "You Awoke here, there are paths to the East and West",
@@ -80,12 +83,35 @@ worldmap = {
         "DESCRIPTION": "A mossy wall with a slight crack in the middle, you can't see through it",
         "PATHS": {
             "EAST": "ORM",
-            ""
         },
     },
     "MW2":{
         "NAME": "mossy wall",
-        "DESCRIPTION": "It is a mossy wall"
+        "DESCRIPTION": "It is a mossy wall",
+        "PATHS": {
+            "CHECK": "PDC",
+            "SOUTH": "OMU",
+        },
+    },
+    "RDCE"{
+        "NAME": "Rubber Duck Cult entrance",
+        "DESCRIPTION": "This is the entrance to the rubber duck cult, there are white walls to the East and West, and a "
+                       "Door with a purple duck scanner",
+        "PATHS"{
+            ""
+        },
     },
 },
 
+while playing == True:
+    command = input(">_")
+    if command.lower() in ["q", "quit", 'exit']:
+        playing = False
+    elif command.upper() in directions:
+        try:
+            room_name = current_node["PATHS"][command.upper()]
+            current_node = World[room_name]
+        except KeyError:
+            print("I can't go that way")
+    else:
+        print("command not recognized")

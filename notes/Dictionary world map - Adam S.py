@@ -82,7 +82,7 @@ worldmap = {
         'DESCRIPTION': "You are currently in this class, a parking lot is to the"
                        "north"
         'PATHS'{
-                     'NORTH': 'PARKING_LOT'
+                     'NORTH': 'PARKING_LOT',
                  },
     "PARKING_LOT": {
         "NAME": "parking lot",
