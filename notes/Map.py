@@ -93,12 +93,12 @@ World = {
             "SOUTH": "OMU",
         },
     },
-    "RDCE"{
+    "RDCE":{
         "NAME": "Rubber Duck Cult entrance",
         "DESCRIPTION": "This is the entrance to the rubber duck cult, there are white walls to the East and West, and a "
                        "Door with a purple duck scanner",
-        "PATHS"{
-            ""
+        "PATHS": {
+
         },
     },
 },
