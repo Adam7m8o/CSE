@@ -81,9 +81,9 @@ worldmap = {
         'NAME': "Weibe's room",
         'DESCRIPTION': "You are currently in this class, a parking lot is to the"
                        "north"
-        'PATHS'{
+        'PATHS':{
                      'NORTH': 'PARKING_LOT',
-                 },
+                },
     "PARKING_LOT": {
         "NAME": "parking lot",
             'DESCRIPTION': "there are cars here, weibe's class is to the south ",
@@ -93,7 +93,7 @@ worldmap = {
 }:
 
 # other variables
-current_node = worldmap["R19A"]:
+current_node = world_map["R19A"]:
 directions = ["NORTH", "SOUTH", "EAST", "WEST", "UP", "DOWN"]
 playing = True
 

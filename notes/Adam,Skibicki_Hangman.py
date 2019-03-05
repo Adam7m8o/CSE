@@ -1,50 +1,29 @@
-# import random
+# imports
 import random
+import string
 
 # variables
-tries = 8
-guess = []
-asterisk = []
-please = []
-
-# Win Condition
-Win = False
-
-# Word bank
 word = ("Hello", "Goodbye", "Hollow Knight", "Flex Tape", "Thatsa lotta damage", "Lilo and stich",
-"Megalovania", "Undertale's Fanbase", "million", "Lion King")
+        "Megalovania", "Undertale's Fanbase", "million", "Lion King")
+guesses = []
+Random_Word = (random.choice(word))
+underscores = []
+tries = 8
 
-# word choice
-Word = random.choice(word)
+for characters in Random_Word:
+    underscores.append("*")
+print("".join(underscores))
 
-# Make word list
-Word = (list(Word))
-
-# for loop / make the word asterisks
-for letters_in_word in range(len(Word)):
-    asterisk.append("*")
-
-# print the thing
-print(asterisk)
-
-# loop
 while tries > 0:
-    guess.append(input("choose a letter"))
-    if guess in Word:
-        asterisk = asterisk(Word, asterisk, guess)
-    print(asterisk)
-else:
-    tries -= 1
-
-if tries == 0:
-    Win = False
-
-print(guess)
-print(str(Word))
-
-
-# win/lose
-if Win == True:
-    print("You win")
-else:
-    print("You lose")
+    print("Take a guess")
+    guesses.append(input())
+    if guesses == Random_Word.upper():
+        current_index = underscores.index(guesses)
+        underscores.pop(current_index)
+        underscores.insert(current_index, string.ascii_letters)
+        print("".join(underscores))
+    else:
+        print("That's not in the word")
+        tries -= 1
+print(Random_Word)
+print(guesses)
