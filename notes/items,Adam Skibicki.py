@@ -61,6 +61,11 @@ class Elemental_Bow(Bow):
         self.element_type = element_type
 
 
+class Gloves(Melee):
+    def __init__(self, weight, damage, attack_type, distance, sharpness, fit):
+        super(Gloves, self).__init__(weight, damage, attack_type, distance, sharpness)
+        self.fit = True
+
 
 # Excaliburs
 True_Excalibur = Excalibur(7.5, 25, "swing/bash/circular lazer", 7, True, "Long", True)
@@ -82,4 +87,13 @@ OogaBoogas_staff = Staff(.5, 50, "whack/flying throw", 10, False, True, "Nature 
 Health_Potion = Potion(2, 0, "Consumable", 0, 1, "player.health += 20")
 Acidic_Potion = Potion(5, 20, "thrown", 20, 1, "breaks down their cells")
 
-#
+# Normal swords
+Jordans_sword = Sword(5, 50, "bash/slash/swing", 10, True, "Bastard")
+Shaggys_sword = Sword(0, 99999999999999999999999999999999999999999999999, "All", 99999999999999999999999999999999999999,
+                      99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+                      , "All")
+
+# Gloves
+Jorges_gloves = Gloves(2, 20, "close range punch/jab", 2.5, False, True)
+Thanos_gloves = Gloves(10, 999999999999999999, "snap/punch", 9999999999999999999, False, True)
+Wibes_gloves = Gloves(-2, -20, "you hurt yourself and they feel the pain", -20, True, False)
