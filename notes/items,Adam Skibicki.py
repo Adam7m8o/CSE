@@ -6,6 +6,24 @@ class Item(object):
         self.distance = distance
 
 
+class Armor(Item):
+    def __init__(self, weight, damage, attack_type, distance, defense):
+        super(Armor, self).__init__(weight, damage, attack_type, distance)
+        self.defense = defense
+
+
+class Hats(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, hat_type):
+        super(Hats, self).__init__(weight, damage, attack_type, distance, defense)
+        self.hat_type = hat_type
+
+
+class Cappy(Hats):
+    def __init__(self, weight, damage, attack_type, distance, defense, hat_type, bounces):
+        super(Cappy, self).__init__(weight, damage, attack_type, distance, defense, hat_type)
+        self.
+
+
 class Melee(Item):
     def __init__(self, weight, damage, attack_type, distance, sharpness):
         super(Melee, self).__init__(weight, damage, attack_type, distance)
@@ -55,9 +73,9 @@ class Excalibur(Sword):
         self.holy_aura = holy_aura
 
 
-class Elemental_Bow(Bow):
+class ElementalBow(Bow):
     def __init__(self, weight, damage, attack_type, distance, quality, arrow_type, element_type):
-        super(Elemental_Bow, self).__init__(weight, damage, attack_type, distance, quality, arrow_type)
+        super(ElementalBow, self).__init__(weight, damage, attack_type, distance, quality, arrow_type)
         self.element_type = element_type
 
 
@@ -76,8 +94,8 @@ Wiebes_Bow = Bow(0, 99999999999999, "ranged arrow/close bash", 99999999999999, T
 Dominics_bow = Bow(9999999999999, .0000000000000001, "ranged arrow/close bash", .00000000000000000001, False, "Flint")
 
 # Elemental bows
-Elijahs_bow = Elemental_Bow(2.5, 97, "Ranged arrow/call of the horses", 9999, True, "Earth", "Horse")
-Garfields_bow = Elemental_Bow(.5, 20, "ranged arrow/distraction by lasagna", 200, True, "Fire", "Lasagna")
+Elijahs_bow = ElementalBow(2.5, 97, "Ranged arrow/call of the horses", 9999, True, "Earth", "Horse")
+Garfields_bow = ElementalBow(.5, 20, "ranged arrow/distraction by lasagna", 200, True, "Fire", "Lasagna")
 
 # Staffs
 yahirs_staff = Staff(1, 15, "slap/thrust", 6, False, True, None)
@@ -88,10 +106,10 @@ Health_Potion = Potion(2, 0, "Consumable", 0, 1, "player.health += 20")
 Acidic_Potion = Potion(5, 20, "thrown", 20, 1, "breaks down their cells")
 
 # Normal swords
-Jordans_sword = Sword(5, 50, "bash/slash/swing", 10, True, "Bastard")
+Jordans_sword = Sword(5, 50, "bash/slash/swing", 10, True, "Zweihänder")
 Shaggys_sword = Sword(0, 99999999999999999999999999999999999999999999999, "All", 99999999999999999999999999999999999999,
-                      99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-                      , "All")
+                      9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
+                      "All")
 
 # Gloves
 Jorges_gloves = Gloves(2, 20, "close range punch/jab", 2.5, False, True)
