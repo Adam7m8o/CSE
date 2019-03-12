@@ -1,5 +1,5 @@
 World = {
-    "OMD":{
+    "OMD": {
         'NAME': "Forest",
         'DESCRIPTION': "You Awoke here, there are paths to the East and West",
         'PATHS': {
@@ -19,7 +19,7 @@ World = {
         "NAME": "Forest",
         "DESCRIPTION": "Your'e surrounded by trees and shrubbery, there's glint from one of the bushes"
                        " There are paths to the North and to the East",
-        "PATHS":{
+        "PATHS": {
             "NORTH": "ORM",
             "EAST": "OMD",
         },
@@ -42,7 +42,7 @@ World = {
             "WEST": "MW1"
         },
     },
-    "ORU":{
+    "ORU": {
         "NAME": "Forest",
         "DESCRIPTION": "You are surrounded by dying trees and shrubbery, there are paths to the West and South",
         "PATHS": {
@@ -85,7 +85,7 @@ World = {
             "CHECK": "OMM"
         },
     },
-    "MW2":{
+    "MW2": {
         "NAME": "mossy wall",
         "DESCRIPTION": "It is a mossy wall",
         "PATHS": {
@@ -93,7 +93,7 @@ World = {
             "SOUTH": "OMU",
         },
     },
-    "RDCE":{
+    "RDCE": {
         "NAME": "Rubber Duck Cult entrance",
         "DESCRIPTION": "This is the entrance to the rubber duck cult, there are white walls to the East and West, "
                        "and a door with a purple duck scanner",
@@ -103,7 +103,7 @@ World = {
             "SOUTH": "OMU"
         },
     },
-    "WWW":{
+    "WWW": {
         "NAME": "White wall",
         "DESCRIPTION": "It is a white wall,there are paths to the West and the North",
         "PATHS": {
@@ -111,19 +111,19 @@ World = {
             "WEST": "RDCE"
         },
     },
-    "WWR":{
+    "WWR": {
         "NAME": "White wall",
         "DESCRIPTION": "It's a white wall there are paths to the West and to the North",
-        "PATHS":{
+        "PATHS": {
             "NORTH": "RDCED",
             "WEST": "RDCE"
         },
     },
-    "RDCED":{
+    "RDCED": {
         "NAME": "Rubber Duck Cult entrance door",
         "DESCRIPTION": "This is the door that leads to the main room of the Rubber Duck Cult, there is a path to the "
                        "South",
-        "PATHS":{
+        "PATHS": {
             "SOUTH": "RDCE"
         },
     },
