@@ -21,7 +21,13 @@ class Hats(Armor):
 class Cappy(Hats):
     def __init__(self, weight, damage, attack_type, distance, defense, hat_type, bounces):
         super(Cappy, self).__init__(weight, damage, attack_type, distance, defense, hat_type)
-        self.
+        self.bounces = bounces
+
+
+class Chestpiece(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, chest_piece_type):
+        super(Chestpiece, self).__init__(weight, damage, attack_type, distance, defense)
+        self.chest_piece_type = chest_piece_type
 
 
 class Melee(Item):
@@ -82,7 +88,7 @@ class ElementalBow(Bow):
 class Gloves(Melee):
     def __init__(self, weight, damage, attack_type, distance, sharpness, fit):
         super(Gloves, self).__init__(weight, damage, attack_type, distance, sharpness)
-        self.fit = True
+        self.fit = fit
 
 
 # Excaliburs
@@ -115,3 +121,12 @@ Shaggys_sword = Sword(0, 99999999999999999999999999999999999999999999999, "All",
 Jorges_gloves = Gloves(2, 20, "close range punch/jab", 2.5, False, True)
 Thanos_gloves = Gloves(10, 999999999999999999, "snap/punch", 9999999999999999999, False, True)
 Wibes_gloves = Gloves(-2, -20, "you hurt yourself and they feel the pain", -20, True, False)
+
+# hats
+My_Hat = Hats(.5, 0, "none", 0, 10, "cap")
+
+# cappy
+Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounces = 1 else self.bounces = 2")
+
+# chestpiece
+my_chestpiece = Chestpiece(5, 0, "None", )
