@@ -129,4 +129,4 @@ My_Hat = Hats(.5, 0, "none", 0, 10, "cap")
 Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounces = 1 else self.bounces = 2")
 
 # chestpiece
-my_chestpiece = Chestpiece(5, 0, "None", )
+my_chestpiece = Chestpiece(5, 0, "None", 0, 20, "iron plate armor")
