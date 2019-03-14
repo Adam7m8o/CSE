@@ -24,16 +24,38 @@ class Cappy(Hats):
         self.bounces = bounces
 
 
-class Chestpiece(Armor):
+class ChestPiece(Armor):
     def __init__(self, weight, damage, attack_type, distance, defense, chest_piece_type):
-        super(Chestpiece, self).__init__(weight, damage, attack_type, distance, defense)
+        super(ChestPiece, self).__init__(weight, damage, attack_type, distance, defense)
         self.chest_piece_type = chest_piece_type
+
+
+class LegArmor(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, leg_type_armor):
+        super(LegArmor, self).__init__(weight, damage, attack_type, distance, defense)
+        self.leg_type_armor = leg_type_armor
+
+
+class Shoes(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, shoe_size):
+        super(Shoes, self).__init__(weight, damage, attack_type, distance, defense)
+        self.shoe_size = shoe_size
 
 
 class Melee(Item):
     def __init__(self, weight, damage, attack_type, distance, sharpness):
         super(Melee, self).__init__(weight, damage, attack_type, distance)
         self.sharpness = sharpness
+
+
+class Weibe(Melee):
+    def __init__(self, weight, damage, attack_type, distance, sharpness, bitcoin):
+        super(Weibe, self).__init__(weight, damage, attack_type, distance, sharpness)
+        self.bitcoin = bitcoin
+
+
+class Dominic(Melee):
+    def __init__(self, weight, damage, attack_type, distance, sharpness):
 
 
 class Consumables(Item):
@@ -129,4 +151,4 @@ My_Hat = Hats(.5, 0, "none", 0, 10, "cap")
 Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounces = 1 else self.bounces = 2")
 
 # chestpiece
-my_chestpiece = Chestpiece(5, 0, "None", 0, 20, "iron plate armor")
+my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
