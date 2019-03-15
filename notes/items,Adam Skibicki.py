@@ -60,6 +60,12 @@ class Consumables(Item):
         self.ammunition = ammunition
 
 
+class Elijah(Consumables):
+    def __init__(self, weight, damage, attack_type, distance, ammunition):
+        super(Elijah, self).__init__(weight, damage, attack_type, distance, ammunition)
+        self.smash_skill = True
+
+
 class Ranged(Item):
     def __init__(self, weight, damage, attack_type, distance, quality):
         super(Ranged, self).__init__(weight, damage, attack_type, distance)
@@ -115,7 +121,7 @@ class Gloves(Melee):
         self.fit = fit
 
 
-# Excaliburs
+# Excalibur's
 True_Excalibur = Excalibur(7.5, 25, "swing/bash/circular lazer", 7, True, "Long", True)
 Excalibur = Excalibur(7.5, 25, "swing/bash", 7, True, "Long", False)
 
@@ -133,7 +139,7 @@ OogaBoogas_staff = Staff(.5, 50, "whack/flying throw", 10, False, True, "Nature 
 
 # Potions
 Health_Potion = Potion(2, 0, "Consumable", 0, 1, "player.health += 20")
-Acidic_Potion = Potion(5, 20, "thrown", 20, 1, "breaks down their cells")
+LAMB_SAUCE = Potion(5, 20, "thrown", 20, 1, "breaks down their cells")
 
 # Normal swords
 Jordans_sword = Sword(5, 50, "bash/slash/swing", 10, True, "Zweihänder")
@@ -156,7 +162,10 @@ Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounce
 my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
 
 # Weibe
-Weibe = Weibe("?", 999999999, "changes enemys code", True, "")
+Weibe = Weibe("?", 999999999, "changes enemy's code", 50, True, 'MSI GS65 Stealth Thin 15.6-inch')
 
 # Dominic
 Dominic = Dominic(20, 50, "bash", 9, False)
+
+# Elijah
+Packet_Of_Elijah = Elijah(12, 500, "Plays game of smash", 200, 6, )

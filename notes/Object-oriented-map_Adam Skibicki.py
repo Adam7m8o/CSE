@@ -72,10 +72,22 @@ class Cappy(Hats):
         self.bounces = bounces
 
 
-class Chestpiece(Armor):
+class ChestPiece(Armor):
     def __init__(self, weight, damage, attack_type, distance, defense, chest_piece_type):
-        super(Chestpiece, self).__init__(weight, damage, attack_type, distance, defense)
+        super(ChestPiece, self).__init__(weight, damage, attack_type, distance, defense)
         self.chest_piece_type = chest_piece_type
+
+
+class LegArmor(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, leg_type_armor):
+        super(LegArmor, self).__init__(weight, damage, attack_type, distance, defense)
+        self.leg_type_armor = leg_type_armor
+
+
+class Shoes(Armor):
+    def __init__(self, weight, damage, attack_type, distance, defense, shoe_size):
+        super(Shoes, self).__init__(weight, damage, attack_type, distance, defense)
+        self.shoe_size = shoe_size
 
 
 class Melee(Item):
@@ -84,16 +96,34 @@ class Melee(Item):
         self.sharpness = sharpness
 
 
+class Dominic(Melee):
+    def __init__(self, weight, damage, attack_type, distance, sharpness):
+        super(Dominic, self).__init__(weight, damage, attack_type, distance, sharpness)
+        self.jokes = None
+
+
 class Consumables(Item):
     def __init__(self, weight, damage, attack_type, distance, ammunition):
         super(Consumables, self).__init__(weight, damage, attack_type, distance)
         self.ammunition = ammunition
 
 
+class Elijah(Consumables):
+    def __init__(self, weight, damage, attack_type, distance, ammunition):
+        super(Elijah, self).__init__(weight, damage, attack_type, distance, ammunition)
+        self.smash_skill = True
+
+
 class Ranged(Item):
     def __init__(self, weight, damage, attack_type, distance, quality):
         super(Ranged, self).__init__(weight, damage, attack_type, distance)
         self.quality = quality
+
+
+class Weibe(Ranged):
+    def __init__(self, weight, damage, attack_type, distance, quality, computer):
+        super(Weibe, self).__init__(weight, damage, attack_type, distance, quality)
+        self.computer = computer
 
 
 class Staff(Melee, Ranged):
