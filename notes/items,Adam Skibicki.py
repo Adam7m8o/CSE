@@ -48,14 +48,10 @@ class Melee(Item):
         self.sharpness = sharpness
 
 
-class Weibe(Melee):
-    def __init__(self, weight, damage, attack_type, distance, sharpness, bitcoin):
-        super(Weibe, self).__init__(weight, damage, attack_type, distance, sharpness)
-        self.bitcoin = bitcoin
-
-
 class Dominic(Melee):
     def __init__(self, weight, damage, attack_type, distance, sharpness):
+        super(Dominic, self).__init__(weight, damage, attack_type, distance, sharpness)
+        self.jokes = None
 
 
 class Consumables(Item):
@@ -68,6 +64,12 @@ class Ranged(Item):
     def __init__(self, weight, damage, attack_type, distance, quality):
         super(Ranged, self).__init__(weight, damage, attack_type, distance)
         self.quality = quality
+
+
+class Weibe(Ranged):
+    def __init__(self, weight, damage, attack_type, distance, quality, computer):
+        super(Weibe, self).__init__(weight, damage, attack_type, distance, quality)
+        self.computer = computer
 
 
 class Staff(Melee, Ranged):
@@ -152,3 +154,9 @@ Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounce
 
 # chestpiece
 my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
+
+# Weibe
+Weibe = Weibe("?", 999999999, "changes enemys code", True, "")
+
+# Dominic
+Dominic = Dominic(20, 50, "bash", 9, False)
