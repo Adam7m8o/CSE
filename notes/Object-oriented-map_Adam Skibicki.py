@@ -31,6 +31,18 @@ class Character(object):
         target.take_damage(self.weapon.damage)
 
 
+class Cultist(Character):
+    def __init__(self, name, health, weapon, armor, level):
+        super(Cultist, self).__init__(name, health, weapon, armor)
+        self.level = level
+
+
+class RubberDuck(Character):
+    def __init__(self, name, health, weapon, armor, person):
+        super(RubberDuck, self). __init__(name, health, weapon, armor)
+        self.person = person
+
+
 class Player(object):
     def __init__(self, starting_location):
         self.health = 100
@@ -127,8 +139,7 @@ class Weibe(Ranged):
 
 
 class Staff(Melee, Ranged):
-    def __init__(self, weight, damage, attack_type, distance, sharpness, quality, magic_type):
-        Melee.__init__(self, weight, damage, attack_type, distance, sharpness)
+    def __init__(self, weight, damage, attack_type, distance, quality, magic_type):
         Ranged.__init__(self, weight, damage, attack_type, distance, quality)
         self.magic_type = magic_type
 
@@ -169,18 +180,52 @@ class Gloves(Melee):
         self.fit = fit
 
 
-class Cultist(object):
-    def __init__(self):
-        self.Health = 20
-        self.Damage = 10
-        self.Name = Cultist
-
-
 # weapons
 True_Excalibur = Excalibur(7.5, 25, "swing/bash/beyblade spin", 7, True, "Long", True)
 Shaggys_sword = Sword(0, 99999999999999999999999999999999999999999999999, "All", 99999999999999999999999999999999999999,
                       9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
                       "All")
+# Bows
+Wiebes_Bow = Bow(0, 99999999999999, "ranged arrow/close bash", 99999999999999, True, "Holy")
+Dominics_bow = Bow(9999999999999, .0000000000000001, "ranged arrow/close bash", .00000000000000000001, False, "Flint")
+
+# Elemental bows
+Elijahs_bow = ElementalBow(2.5, 97, "Ranged arrow/call of the horses", 9999, True, "Earth", "Horse")
+Garfields_bow = ElementalBow(.5, 20, "ranged arrow/distraction by lasagna", 200, True, "Fire", "Lasagna")
+
+# Staffs
+Yahirs_staff = Staff(1, 50, "magic/bash", 10, True, "Fire")
+OogaBoogas_staff = Staff(.5, 50, "whack/flying throw", 10, True, "Nature magic(specifically birds)")
+
+# Potions
+Health_Potion = Potion(2, 0, "Consumable", 0, 1, "player.health += 20")
+LAMB_SAUCE = Potion(5, 20, "thrown", 20, 1, "breaks down their cells")
+
+# Normal swords
+Jordans_sword = Sword(5, 50, "bash/slash/swing", 10, True, "Zweihänder")
+
+# Gloves
+Jorges_gloves = Gloves(2, 20, "close range punch/jab", 2.5, False, True)
+Thanos_gloves = Gloves(10, 999999999999999999, "snap/punch", 9999999999999999999, False, True)
+
+# hats
+My_Hat = Hats(.5, 0, "none", 0, 10, "cap")
+
+# cappy
+Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounces = 1 else self.bounces = 2")
+
+# chestpiece
+my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
+
+# Weibe
+Weibe = Weibe("?", 999999999, "changes enemy's code", 50, True, 'MSI GS65 Stealth Thin 15.6-inch')
+
+# Dominic
+Dominic = Dominic(20, 50, "bash", 9, False)
+
+# Elijah
+Packet_Of_Elijah = Elijah(12, 500, "Plays game of smash", 200, 6,)
+
 
 # characters
 c1 = Character("Orc1", 100, True_Excalibur, None)
@@ -228,7 +273,6 @@ while playing:
         try:
             room_name = getattr(player.current_location, command)
             room_object = globals()[room_name]
-
             player.move(room_object)
         except AttributeError:
             print("I can't go that way")
