@@ -1,6 +1,6 @@
 class Room(object):
     def __init__(self, name, description="", north=None, east=None, south=None, west=None, check=None, up=None,
-                 down=None):
+                 down=None, items=[]):
         self.name = name
         self.description = description
         self.north = north
@@ -10,7 +10,7 @@ class Room(object):
         self.up = up
         self.down = down
         self.check = check
-        self.items = []
+        self.items = items
 
 
 class Character(object):
@@ -214,6 +214,7 @@ My_Hat = Hats(.5, 0, "none", 0, 10, "cap")
 # cappy
 Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounces = 1 else self.bounces = 2")
 
+
 # chestpiece
 my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
 
@@ -236,16 +237,15 @@ c2.attack(c1)
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
 ORD = Room("Forest", "Your'e surrounded by trees and shrubbery, there's glint from one of the bushes "
-                     "there are paths to the North and to the East", "ORM", "OMD", None, None)
+                     "there are paths to the North and to the East", "ORM", "OMD", None, None, [Shaggys_sword])
 OLD = Room("Forest", "You are surrounded by trees and shrubbery, there are paths to the North and West", "OLM", None,
            None, "OMD")
 OLM = Room("Forest", "You're surrounded by trees and shrubbery, there are paths to the North and the south", "OLU",
            None, "OLD", None)
 ORM = Room("Forest", "Trees and shrubbery surround you, there are paths to the North and the South,"
-                     "There is a small crack in the mossy mountain to the west", "ORU", None, "ORD", "MW1")
+                     "There is a small crack in the mossy mountain to the west", "ORU", None, "ORD", "CW1")
 ORU = Room("Forest", "You are surrounded by dying trees and shrubbery, there are paths to the West and South", None,
            None, "ORM", "OMU")
-MW1 = Room("Mossy Wall", "It's a mossy wall", None, "ORM", None, None)
 OMU = Room("Forest", "You are surrounded by dying trees and shrubbery, the wall to the north is covered in a thick"
                      " layer of moss", "MW2", "ORU", None, "OLU")
 OLU = Room("Forest", "You are surrounded by trees and shrubbery, there are paths to the East and the South", None,
