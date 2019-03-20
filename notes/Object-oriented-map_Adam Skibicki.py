@@ -56,6 +56,9 @@ class Player(object):
         :param new_location: the variable containing a room object
         """
         self.current_location = new_location
+'''
+    def get(self, ):
+'''
 
 
 class Item(object):
@@ -219,7 +222,7 @@ Cappy = Cappy(0, 0, "throw/mind control", 5, 3, "ghost hat", "If air self.bounce
 my_chestpiece = ChestPiece(5, 0, "None", 0, 20, "iron plate armor")
 
 # Weibe
-Weibe = Weibe("?", 999999999, "changes enemy's code", 50, True, 'MSI GS65 Stealth Thin 15.6-inch')
+Weibe = Weibe("?", 9999999999999999999999999999999, "changes enemy's code", 50, True, 'MSI GS65 Stealth Thin 15.6-inch')
 
 # Dominic
 Dominic = Dominic(20, 50, "bash", 9, False)
@@ -262,7 +265,7 @@ PDS1 = Room("A duck scanner", "A scanner for level purple ducks", "RDCE", None, 
 player = Player(OMD)
 
 playing = True
-directions = ["north", "south", "east", "west", "up", "down", "check"]
+directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
