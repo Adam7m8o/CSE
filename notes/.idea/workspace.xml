@@ -111,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Object-oriented-map_Adam Skibicki.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4845">
-              <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+            <state relative-caret-position="-1917">
+              <caret line="142" selection-start-line="142" selection-end-line="142" />
               <folding>
                 <marker date="1553094561462" expanded="true" signature="19:24" ph="..." />
                 <marker date="1553094561462" expanded="true" signature="1805:6358" ph="..." />
@@ -420,13 +420,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49344262" weight="0.33509833" />
       <window_info id="Structure" order="1" sideWeight="0.5022831" side_tool="true" weight="0.22163388" />
       <window_info id="Favorites" order="2" sideWeight="0.5065574" side_tool="true" weight="0.14069591" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30983606" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30983606" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -562,8 +563,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Object-oriented-map_Adam Skibicki.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4845">
-          <caret line="285" lean-forward="true" selection-start-line="285" selection-end-line="285" />
+        <state relative-caret-position="-1917">
+          <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <marker date="1553094561462" expanded="true" signature="19:24" ph="..." />
             <marker date="1553094561462" expanded="true" signature="1805:6358" ph="..." />
