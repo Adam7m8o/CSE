@@ -56,9 +56,10 @@ class Player(object):
         :param new_location: the variable containing a room object
         """
         self.current_location = new_location
-'''
-    def get(self, ):
-'''
+
+    def get(self, inventory):
+        print()
+        Room.self.items
 
 
 class Item(object):
