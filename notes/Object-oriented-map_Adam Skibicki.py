@@ -57,9 +57,11 @@ class Player(object):
         """
         self.current_location = new_location
 
+'''
     def get(self, inventory):
         print()
         Room.self.items
+'''
 
 
 class Item(object):
@@ -240,7 +242,7 @@ c1.attack(c2)
 c2.attack(c1)
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
-ORD = Room("Forest", "Your'e surrounded by trees and shrubbery, there's glint from one of the bushes "
+ORD = Room("Forest", "You're surrounded by trees and shrubbery "
                      "there are paths to the North and to the East", "ORM", "OMD", None, None, [Shaggys_sword])
 OLD = Room("Forest", "You are surrounded by trees and shrubbery, there are paths to the North and West", "OLM", None,
            None, "OMD")
@@ -270,6 +272,7 @@ directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print(Room.items)
     command = input(">_")
     if command.lower() in ["q", "quit", 'exit']:
         playing = False
