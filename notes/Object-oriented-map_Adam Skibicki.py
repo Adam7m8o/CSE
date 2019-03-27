@@ -233,13 +233,14 @@ Dominic = Dominic(20, 50, "bash", 9, False)
 # Elijah
 Packet_Of_Elijah = Elijah(12, 500, "Plays game of smash", 200, 6,)
 
-
+'''
 # characters
 c1 = Character("Orc1", 100, True_Excalibur, None)
 c2 = Character("Shaggy", 9999999999999999999999999999999999999999, Shaggys_sword, None)
 
 c1.attack(c2)
 c2.attack(c1)
+'''
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
 ORD = Room("Forest", "You're surrounded by trees and shrubbery "
@@ -272,7 +273,6 @@ directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
-    print(Room.items)
     command = input(">_")
     if command.lower() in ["q", "quit", 'exit']:
         playing = False
@@ -285,5 +285,12 @@ while playing:
             print("I can't go that way")
         except KeyError:
             print("This key doesn't exist")
+    elif "get" in command:
+        print()
+        # Isolate the name of the item to pick up
+
+        # See if the item is in the room
+
+        # Put the item in your inventory and remove it from the room
     else:
         print("command not recognized")
