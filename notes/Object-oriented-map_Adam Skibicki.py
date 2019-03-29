@@ -57,12 +57,6 @@ class Player(object):
         """
         self.current_location = new_location
 
-'''
-    def get(self, inventory):
-        print()
-        Room.self.items
-'''
-
 
 class Item(object):
     def __init__(self, name, weight, damage, attack_type, distance):
@@ -92,7 +86,7 @@ class Cappy(Hats):
 
 
 class ChestPiece(Armor):
-    def __init__(self,name, weight, damage, attack_type, distance, defense, chest_piece_type):
+    def __init__(self, name, weight, damage, attack_type, distance, defense, chest_piece_type):
         super(ChestPiece, self).__init__(name, weight, damage, attack_type, distance, defense)
         self.chest_piece_type = chest_piece_type
 
@@ -204,7 +198,8 @@ Garfields_bow = ElementalBow("Garfield's bow", .5, 20, "ranged arrow/distraction
 
 # Staffs
 Yahirs_staff = Staff("Yahir's staff", 1, 50, "magic/bash", 10, True, "Fire")
-OogaBoogas_staff = Staff("OogaBooga's Staff", .5, 50, "whack/flying throw", 10, True, "Nature magic(specifically birds)")
+OogaBoogas_staff = Staff("OogaBooga's Staff", .5, 50, "whack/flying throw", 10, True, "Nature magic(specifically birds)"
+                         )
 
 # Potions
 Health_Potion = Potion("Health potion", 2, 0, "Consumable", 0, 1, "player.health += 20")
@@ -237,14 +232,6 @@ Dominic = Dominic("Dominic", 20, 50, "bash", 9, False)
 # Elijah
 Packet_Of_Elijah = Elijah("Packet of Elijah", 12, 500, "Plays game of smash", 200, 6,)
 
-'''
-# characters
-c1 = Character("Orc1", 100, True_Excalibur, None)
-c2 = Character("Shaggy", 9999999999999999999999999999999999999999, Shaggys_sword, None)
-
-c1.attack(c2)
-c2.attack(c1)
-'''
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
 ORD = Room("Forest", "You're surrounded by trees and shrubbery "
