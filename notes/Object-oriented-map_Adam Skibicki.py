@@ -280,10 +280,10 @@ while playing:
     # pick up command
 
     elif "get" in command:
-        target_item = command[4:]
+        target_item = input("What Item?")
         found_item = None
         for thing in player.current_location.items:
-            if thing.name == target_item:
+            if Room.items == target_item:
                 found_item = target_item
         if isinstance(found_item, Item):
             print("You picked up %s" % found_item.name)
