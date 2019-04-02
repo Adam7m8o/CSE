@@ -1,6 +1,6 @@
 class Room(object):
     def __init__(self, name, description="", north=None, east=None, south=None, west=None, check=None, up=None,
-                 down=None, items=[]):
+                 down=None):
         self.name = name
         self.description = description
         self.north = north
@@ -10,7 +10,7 @@ class Room(object):
         self.up = up
         self.down = down
         self.check = check
-        self.items = items
+        self.items = []
 
 
 class Character(object):
@@ -280,10 +280,10 @@ while playing:
     # pick up command
 
     elif "get" in command:
-        target_item = input("What Item?")
+        target_item = command[4:]
         found_item = None
         for thing in player.current_location.items:
-            if Room.items == target_item:
+            if thing.name == target_item:
                 found_item = target_item
         if isinstance(found_item, Item):
             print("You picked up %s" % found_item.name)
