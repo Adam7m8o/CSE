@@ -57,6 +57,9 @@ class Player(object):
         """
         self.current_location = new_location
 
+    def inventory(self, inventory):
+        print(player.inventory)
+
 
 class Item(object):
     def __init__(self, name, weight, damage, attack_type, distance):
@@ -264,6 +267,7 @@ directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print(player.inventory)
     command = input(">_")
     if command.lower() in ["q", "quit", 'exit']:
         playing = False
