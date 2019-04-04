@@ -1,6 +1,6 @@
 class Room(object):
     def __init__(self, name, description="", north=None, east=None, south=None, west=None, check=None, up=None,
-                 down=None):
+                 down=None, items=[]):
         self.name = name
         self.description = description
         self.north = north
@@ -10,7 +10,7 @@ class Room(object):
         self.up = up
         self.down = down
         self.check = check
-        self.items = []
+        self.items = items
 
 
 class Character(object):
@@ -56,9 +56,6 @@ class Player(object):
         :param new_location: the variable containing a room object
         """
         self.current_location = new_location
-
-    def inventory(self, inventory):
-        print(player.inventory)
 
 
 class Item(object):
@@ -238,11 +235,12 @@ Packet_Of_Elijah = Elijah("Packet of Elijah", 12, 500, "Plays game of smash", 20
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
 ORD = Room("Forest", "You're surrounded by trees and shrubbery "
-                     "there are paths to the North and to the East", "ORM", "OMD", None, None, Shaggys_sword)
+                     "there are paths to the North and to the East", "ORM", "OMD", None, None, None, None, None,
+           [Shaggys_sword])
 OLD = Room("Forest", "You are surrounded by trees and shrubbery, there are paths to the North and West", "OLM", None,
            None, "OMD", Wiebes_Bow)
 OLM = Room("Forest", "You're surrounded by trees and shrubbery, there are paths to the North and the south", "OLU",
-           None, "OLD", None)
+           None, "OLD", None, None, None, None, [Dominic])
 ORM = Room("Forest", "Trees and shrubbery surround you, there are paths to the North and the South,"
                      "There is a small crack in the mossy mountain to the west", "ORU", None, "ORD", "CW1")
 ORU = Room("Forest", "You are surrounded by dying trees and shrubbery, there are paths to the West and South", None,
@@ -286,18 +284,17 @@ while playing:
     elif "get" in command:
         target_item = command[4:]
         found_item = None
+        print(player.current_location.items)
         for thing in player.current_location.items:
             if thing.name == target_item:
-                found_item = target_item
-        if isinstance(found_item, Item):
+                found_item = thing
+        if found_item is not None:
             print("You picked up %s" % found_item.name)
             player.inventory.append(found_item)
             for i, item in enumerate(player.current_location.items):
                 if item.name == found_item.name:
                     player.current_location.items.pop(i)
-        elif found_item is None:
-            print("That doesn't exist.")
         else:
-            print("You can't pick that up.")
+            print("That doesn't exist.")
     else:
         print("command not recognized")
