@@ -67,6 +67,15 @@ class Item(object):
         self.distance = distance
 
 
+class Pickaxe(Item):
+    def __init__(self, name, weight, damage, attack_type, distance, uses):
+        super(Pickaxe, self).__init__(name, weight, damage, attack_type, distance)
+        self.uses = uses
+
+    def Break_Wall(self, uses):
+        Pickaxe.uses -= 1
+
+
 class Armor(Item):
     def __init__(self, name, weight, damage, attack_type, distance, defense):
         super(Armor, self).__init__(name, weight, damage, attack_type, distance)
@@ -262,11 +271,17 @@ player = Player(OMD)
 
 playing = True
 directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
+short_directions = ["n", "s", "e", "w", "u", "d", "c", "a"]
+
 while playing:
     print(player.current_location.name)
     print(player.current_location.description)
+    print(player.current_location.items)
     print(player.inventory)
     command = input(">_")
+    if command.lower() in short_directions:
+        pos = short_directions.index(command)
+        command = directions[pos]
     if command.lower() in ["q", "quit", 'exit']:
         playing = False
     elif command.lower() in directions:
@@ -284,7 +299,6 @@ while playing:
     elif "get" in command:
         target_item = command[4:]
         found_item = None
-        print(player.current_location.items)
         for thing in player.current_location.items:
             if thing.name == target_item:
                 found_item = thing
