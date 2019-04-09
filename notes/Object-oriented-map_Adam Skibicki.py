@@ -72,9 +72,6 @@ class Pickaxe(Item):
         super(Pickaxe, self).__init__(name, weight, damage, attack_type, distance)
         self.uses = uses
 
-    def Break_Wall(self, uses):
-        Pickaxe.uses -= 1
-
 
 class Armor(Item):
     def __init__(self, name, weight, damage, attack_type, distance, defense):
