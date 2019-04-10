@@ -36,6 +36,12 @@ class Cultist(Character):
         super(Cultist, self).__init__(name, health, weapon, armor)
         self.level = level
 
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health < 0:
+            self.health = 0
+        print("%s has %d health left" % (self.name, self.health))
+
 
 class RubberDuck(Character):
     def __init__(self, name, health, weapon, armor, person):
@@ -238,11 +244,13 @@ Dominic = Dominic("Dominic", 20, 50, "bash", 9, False)
 # Elijah
 Packet_Of_Elijah = Elijah("Packet of Elijah", 12, 500, "Plays game of smash", 200, 6,)
 
+# cultist
+Cultist1 = Cultist("Bob", 10, Dominics_bow, None, 1)
 
 OMD = Room("Forest", "You Awoke here, there are paths to the East and West", None, "ORD", None, "OLD")
 ORD = Room("Forest", "You're surrounded by trees and shrubbery "
                      "there are paths to the North and to the East", "ORM", "OMD", None, None, None, None, None,
-           [Shaggys_sword])
+           [Shaggys_sword, Cultist1])
 OLD = Room("Forest", "You are surrounded by trees and shrubbery, there are paths to the North and West", "OLM", None,
            None, "OMD", Wiebes_Bow)
 OLM = Room("Forest", "You're surrounded by trees and shrubbery, there are paths to the North and the south", "OLU",
@@ -267,8 +275,8 @@ PDS1 = Room("A duck scanner", "A scanner for level purple ducks", "RDCE", None, 
 player = Player(OMD)
 
 playing = True
-directions = ["north", "south", "east", "west", "up", "down", "check", "attack"]
-short_directions = ["n", "s", "e", "w", "u", "d", "c", "a"]
+directions = ["north", "south", "east", "west", "up", "down", "check", "attack", "inventory"]
+short_directions = ["n", "s", "e", "w", "u", "d", "c", "a", "i"]
 
 while playing:
     print(player.current_location.name)
