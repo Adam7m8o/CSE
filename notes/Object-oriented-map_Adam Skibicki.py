@@ -300,6 +300,8 @@ while playing:
             print("This key doesn't exist")
 
     # pick up command
+    elif "attack" in command:
+        target = command[7:]
 
     elif "get" in command:
         target_item = command[4:]
