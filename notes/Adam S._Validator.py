@@ -25,15 +25,3 @@ def reverse(num: str):
 
 def multiply_odd(num: str):
 
-
-    # with open("book1.csv", "r") as old_csv:
-#     with open("MyNewishFile.csv", "w", newline='') as new_csv:
-#         reader = csv.reader(old_csv)
-#         writer = csv.writer(new_csv)
-#         print("processing...")
-#
-#         for row in reader:
-#             old_number = row[0]  # string
-#             if validate(old_number):
-#                 writer.writerow(row)
-#         print("Okay")
