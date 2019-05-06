@@ -24,4 +24,3 @@ def reverse(num: str):
 
 
 def multiply_odd(num: str):
-

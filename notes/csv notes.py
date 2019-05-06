@@ -31,7 +31,6 @@ def reverse(num: str):
 reverse("4639198752831360")
 
 
-
 #     first_num = int(num[0])
 #     if first_num % 1 == 1:
 #         return True
